@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282828;
+  font-family: 'Roboto', sans-serif;
+  counter-reset: item -1;
+}
+
+h1 {
+  color: #00897b;
+  text-align: center;
+  padding-top: 12%;
+  font-size: 100px;
+}
+
+h2 {
+  color: #bfbfbf;
+  font-size: 40px;
+  text-align: center;
+}
+
+nav {
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  align-items: center;
+  background-color: #282828;
+  width: 100%;
+  position: relative;
+  padding-top: 15px;
+}
+
+.nav-logo {
+  padding-top: 5px;
+  width: 60px;
+  height: auto;
+}
+
+.nav-links {
+  padding-left: 5%;
+  padding-right: 45%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  padding-top: 5px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.nav-links li a {
+  color: #bfbfbf;
+}
+
+.nav-links li a:hover {
+  color: #00897b;
+}
+
+.nav-links li a::before {
+  color: #00897b;
+  content: "["counter(item)"] ";
+  counter-increment: item;
+}
+
+.nav-links div a {
+  color: #00897b;
+}
+
+.resume-button {
+  text-align: right;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+  font-size: 25px;
+  position: absolute; right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: 2px solid #00897b;
+  border-radius: 3px;
+}
+
+.resume-button:hover {
+  background: #293937;
+}
+
+#home {
+  
+}
+
+#about-me {
+
+}
+
+#my-projects {
+
+}
+
+#my-work {
+
+}
+
+#contact-me {
+
+}
+
+#end-of-page {
+
+}
