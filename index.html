@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="module" src="js/nav.js"></script>
+        <script type="module" src="js/landing_page.js"></script>
     </head>
     <body>
         <nav class="navbar-toggle">
@@ -28,14 +29,20 @@
                 <div><a href="resources/resume.pdf" target="_blank" class="resume-button">Resume</a></div>
             </ul>
         </nav>
-        <div id="home">
-            <h1>
-                Hi, i'm Brady,
-            </h1>
 
-            <h2>
-                Lorem ipsum dolor sit amet
-            </h2>
+        <div class="landing-page">
+            <canvas width="320" height="240">
+                <p>Your browser doesn't support canvas.</p>
+            </canvas>
+        </div>
+
+        <div id="home">
+            <div class="landing-page">
+                <canvas class="home-canvas">
+                    <p>Your browser doesn't support canvas.</p>
+                </canvas>
+            </div>
+
         </div>
 
         <div id="about-me">
