@@ -32,7 +32,11 @@ None
 
 ### In Progress
 
+None
+
 ### Done
+
+None
 
 ## About Me
 
@@ -40,28 +44,50 @@ None
 
 ### In Progress
 
+None
+
 ### Done
+
+None
 
 ## My Projects
 
 ### Todo
 
+None
+
 ### In Progress
 
+None
+
 ### Done
+
+None
 
 ## My Work
 
 ### Todo
 
+None
+
 ### In Progress
 
+None
+
 ### Done
+
+None
 
 ## Contact Me
 
 ### Todo
 
+None
+
 ### In Progress
 
+None
+
 ### Done
+
+None
