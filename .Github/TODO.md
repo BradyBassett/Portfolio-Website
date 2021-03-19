@@ -8,7 +8,11 @@ well as my work expierence to display everything that I have done.
 
 ### Todo
 
+None
+
 ### In Progress
+
+None
 
 ### Done
 
@@ -20,10 +24,44 @@ well as my work expierence to display everything that I have done.
 
 ## Home page
 
+### Todo
+
+- [ ] Implement interactive background
+- [ ] Refactor home page text
+- [ ] Implement "find out more button"
+
+### In Progress
+
+### Done
+
 ## About Me
+
+### Todo
+
+### In Progress
+
+### Done
 
 ## My Projects
 
+### Todo
+
+### In Progress
+
+### Done
+
 ## My Work
 
+### Todo
+
+### In Progress
+
+### Done
+
 ## Contact Me
+
+### Todo
+
+### In Progress
+
+### Done
