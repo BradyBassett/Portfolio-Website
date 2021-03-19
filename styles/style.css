@@ -6,7 +6,7 @@
 
 body {
   background-color: #282828;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   counter-reset: item -1;
 }
 
@@ -30,8 +30,11 @@ nav {
   align-items: center;
   background-color: #282828;
   width: 100%;
-  position: relative;
-  padding-top: 15px;
+  position: fixed;
+}
+
+.navbar-toggle {
+  transition: ease-in-out 0.2s;
 }
 
 .nav-logo {
@@ -69,7 +72,7 @@ nav {
 
 .nav-links li a::before {
   color: #00897b;
-  content: "["counter(item)"] ";
+  content: "[" counter(item) "] ";
   counter-increment: item;
 }
 
@@ -83,7 +86,8 @@ nav {
   color: inherit;
   letter-spacing: 1px;
   font-size: 25px;
-  position: absolute; right: 50px;
+  position: absolute;
+  right: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 15px;
@@ -97,25 +101,19 @@ nav {
 }
 
 #home {
-  
 }
 
 #about-me {
-
 }
 
 #my-projects {
-
 }
 
 #my-work {
-
 }
 
 #contact-me {
-
 }
 
 #end-of-page {
-
 }
