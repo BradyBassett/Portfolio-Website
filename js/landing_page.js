@@ -72,7 +72,7 @@ function init() {
             var directionY = -(Math.random());
         }
         var color = '#00897b';
-        var alpha = (Math.random() * (0.5 - 0.1 + 2) + 0.2);
+        var alpha = (Math.random() * (0.5 - 0.1 + 1) + 0.2);
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color, alpha));
     }
