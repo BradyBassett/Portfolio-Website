@@ -54,22 +54,24 @@ function init() {
     particlesArray = [];
     var numberOfParticles = (canvas.height * canvas.width) / 10000;
     for (var i = 0; i < numberOfParticles; i++){
-        var size = (Math.random() * 7) + 1;
+        var size = (Math.random() * 10) + 1;
         var x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         var y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         var temp = Math.random()
+        var min = 0.05;
+        var max = 0.2;
         if (temp > 0 && temp <= 0.25){
-            var directionX = (Math.random());
-            var directionY = (Math.random());
+            var directionX = (Math.random() * (max - min) + min);
+            var directionY = (Math.random() * (max - min) + min);
         } else if (temp > 0.25 && temp <= 0.5){
-            var directionX = -(Math.random());
-            var directionY = (Math.random());
+            var directionX = -(Math.random() * (max - min) + min);
+            var directionY = (Math.random() * (max - min) + min);
         } else if (temp > 0.5 && temp <= 0.75){
-            var directionX = (Math.random());
-            var directionY = -(Math.random());
+            var directionX = (Math.random() * (max - min) + min);
+            var directionY = -(Math.random() * (max - min) + min);
         } else {
-            var directionX = -(Math.random());
-            var directionY = -(Math.random());
+            var directionX = -(Math.random() * (max - min) + min);
+            var directionY = -(Math.random() * (max - min) + min);
         }
         var color = '#00897b';
         var alpha = (Math.random() * (0.5 - 0.1 + 1) + 0.2);
