@@ -9,7 +9,7 @@ let particlesArray;
 let mouse = {
     x: null,
     y: null,
-    radius: ((canvas.height / 80) * (canvas.width / 80))
+    radius: ((canvas.height / 100) * (canvas.width / 100))
 };
 
 window.addEventListener("mousemove", function(event){
@@ -52,9 +52,9 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    var numberOfParticles = (canvas.height * canvas.width) / 7000;
+    var numberOfParticles = (canvas.height * canvas.width) / 10000;
     for (var i = 0; i < numberOfParticles; i++){
-        var size = (Math.random() * 4) + 1;
+        var size = (Math.random() * 7) + 1;
         var x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         var y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         var temp = Math.random()
@@ -78,9 +78,28 @@ function init() {
     }
 }
 
-function connectToMouse() {
-    for (var i = 0; i < particlesArray.length; i++){
-        // TODO draw line to mouse from each particle within range
+function connectToMouse(i) {
+    var distance = Math.sqrt((particlesArray[i].x - mouse.x)**2 + (particlesArray[i].y - mouse.y)**2);
+    var opacity = 0.5 - (distance/30000);
+
+    if (distance <= mouse.radius){
+        ctx.strokeStyle = 'rgba(0 , 137, 123, ' + opacity + ')';
+        ctx.lineWidth = 1
+        ctx.beginPath();
+        ctx.moveTo(mouse.x, mouse.y);
+        if (particlesArray[i].x > mouse.x && particlesArray[i].y > mouse.y){
+            ctx.lineTo(particlesArray[i].x - (particlesArray[i].size / 2), particlesArray[i].y - (particlesArray[i].size / 2));
+        }
+        if (particlesArray[i].x < mouse.x && particlesArray[i].y > mouse.y){
+            ctx.lineTo(particlesArray[i].x + (particlesArray[i].size / 2), particlesArray[i].y - (particlesArray[i].size / 2));
+        }
+        if (particlesArray[i].x > mouse.x && particlesArray[i].y < mouse.y){
+            ctx.lineTo(particlesArray[i].x - (particlesArray[i].size / 2), particlesArray[i].y + (particlesArray[i].size / 2));
+        }
+        if (particlesArray[i].x < mouse.x && particlesArray[i].y < mouse.y){
+            ctx.lineTo(particlesArray[i].x + (particlesArray[i].size / 2), particlesArray[i].y + (particlesArray[i].size / 2));
+        }
+        ctx.stroke();
     }
 }
 
@@ -90,13 +109,14 @@ function animate() {
 
     for (var i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
+        connectToMouse(i);
     }
 }
 
 window.addEventListener('resize', function(){
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    mouse.radius = ((canvas.height / 80) * (canvas.width / 80))
+    mouse.radius = ((canvas.height / 100) * (canvas.width / 100));
     init();
 });
 
