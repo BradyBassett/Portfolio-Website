@@ -26,13 +26,14 @@ None
 
 ### Todo
 
-- [ ] Implement interactive background
 - [ ] Refactor home page text
 - [ ] Implement "find out more button"
 
 ### In Progress
 
-None
+- [x] Implement interactive background
+  - [ ] Fix line connection to particles
+  - [ ] Fix mouse position when scrolling down
 
 ### Done
 
