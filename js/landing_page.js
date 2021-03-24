@@ -31,16 +31,16 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#00897b'
+        ctx.fillStyle = this.color
         ctx.globalAlpha = this.alpha;
         ctx.fill();
     }
 
     update() {
-        if (this.x > canvas.width || this.x < 0) {
+        if (this.x + this.size > canvas.width || this.x < this.size) {
             this.directionX = -this.directionX;
         }
-        if (this.y + this.size > canvas.height || this.y < 0) {
+        if (this.y + this.size > canvas.height || this.y < this.size) {
             this.directionY = -this.directionY;
         }
 
@@ -52,9 +52,9 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    var numberOfParticles = (canvas.height * canvas.width) / 10000;
+    var numberOfParticles = (canvas.height * canvas.width) / 20000;
     for (var i = 0; i < numberOfParticles; i++){
-        var size = (Math.random() * 10) + 1;
+        var size = (Math.random() * 30) + 1;
         var x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         var y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         var temp = Math.random()
@@ -74,7 +74,7 @@ function init() {
             var directionY = -(Math.random() * (max - min) + min);
         }
         var color = '#00897b';
-        var alpha = (Math.random() * (0.5 - 0.1 + 1) + 0.2);
+        var alpha = (Math.random() * (0.4 - 0.1) + 0.1);
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color, alpha));
     }
@@ -89,6 +89,7 @@ function connectToMouse(i) {
         ctx.lineWidth = 1
         ctx.beginPath();
         ctx.moveTo(mouse.x, mouse.y);
+        // FIXME make line go to closest point in the particle to mouse
         if (particlesArray[i].x > mouse.x && particlesArray[i].y > mouse.y){
             ctx.lineTo(particlesArray[i].x - (particlesArray[i].size / 2), particlesArray[i].y - (particlesArray[i].size / 2));
         }
