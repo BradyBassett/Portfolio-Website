@@ -86,7 +86,7 @@ function connectToMouse(i) {
 
     if (distance <= mouse.radius){
         ctx.strokeStyle = 'rgba(0 , 137, 123, ' + opacity + ')';
-        ctx.lineWidth = 1
+        ctx.lineWidth = 2
         ctx.beginPath();
         ctx.moveTo(mouse.x, mouse.y);
         // FIXME make line go to closest point in the particle to mouse
