@@ -36,6 +36,7 @@ None
   - [ ] Fix mouse position when scrolling down
 
 - [ ] Add javascript to calculate perfect center for learn more button
+- [ ] Fix a link applying to padding above learn more
 
 ### Done
 
