@@ -35,13 +35,13 @@ None
   - [ ] Fix line connection to particles
   - [ ] Fix mouse position when scrolling down
 
-- [x] Refactor home page text
-
-- [ ] Implement "find out more button"
+- [ ] Add javascript to calculate perfect center for learn more button
 
 ### Done
 
-None
+- [x] Refactor home page text
+
+- [x] Implement "find out more button"
 
 ## About Me
 
