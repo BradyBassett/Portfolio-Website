@@ -7,7 +7,6 @@ canvas.width = window.innerWidth;
 let particlesArray;
 
 
-// FIXME Adjust mouse x & y pos based on scroll bar
 let mouse = {
     x: null,
     y: null,
