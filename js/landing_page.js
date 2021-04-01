@@ -6,6 +6,8 @@ canvas.width = window.innerWidth;
 
 let particlesArray;
 
+
+// FIXME Adjust mouse x & y pos based on scroll bar
 let mouse = {
     x: null,
     y: null,
@@ -82,26 +84,20 @@ function init() {
 
 function connectToMouse(i) {
     var distance = Math.sqrt((particlesArray[i].x - mouse.x)**2 + (particlesArray[i].y - mouse.y)**2);
-    var opacity = 0.5 - (distance/30000);
+    var alpha = 0.5 - (distance/30000);
+
+    var r = (particlesArray[i].size);
+    var closestEdgeX = particlesArray[i].x + (r * ((mouse.x - particlesArray[i].x) / 
+                                                    Math.sqrt((mouse.x - particlesArray[i].x)**2 + (mouse.y - particlesArray[i].y)**2)));
+    var closestEdgeY = particlesArray[i].y + (r * ((mouse.y - particlesArray[i].y) / 
+                                                    Math.sqrt((mouse.x - particlesArray[i].x)**2 + (mouse.y - particlesArray[i].y)**2)));
 
     if (distance <= mouse.radius){
-        ctx.strokeStyle = 'rgba(0 , 137, 123, ' + opacity + ')';
+        ctx.strokeStyle = 'rgba(0 , 137, 123, ' + alpha + ')';
         ctx.lineWidth = 2
         ctx.beginPath();
         ctx.moveTo(mouse.x, mouse.y);
-        // FIXME make line go to closest point in the particle to mouse
-        if (particlesArray[i].x > mouse.x && particlesArray[i].y > mouse.y){
-            ctx.lineTo(particlesArray[i].x - (particlesArray[i].size / 2), particlesArray[i].y - (particlesArray[i].size / 2));
-        }
-        if (particlesArray[i].x < mouse.x && particlesArray[i].y > mouse.y){
-            ctx.lineTo(particlesArray[i].x + (particlesArray[i].size / 2), particlesArray[i].y - (particlesArray[i].size / 2));
-        }
-        if (particlesArray[i].x > mouse.x && particlesArray[i].y < mouse.y){
-            ctx.lineTo(particlesArray[i].x - (particlesArray[i].size / 2), particlesArray[i].y + (particlesArray[i].size / 2));
-        }
-        if (particlesArray[i].x < mouse.x && particlesArray[i].y < mouse.y){
-            ctx.lineTo(particlesArray[i].x + (particlesArray[i].size / 2), particlesArray[i].y + (particlesArray[i].size / 2));
-        }
+        ctx.lineTo(closestEdgeX, closestEdgeY);
         ctx.stroke();
     }
 }
