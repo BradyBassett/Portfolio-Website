@@ -8,6 +8,10 @@ well as my work expierence to display everything that I have done.
 
 ### Todo
 
+None
+
+### In Progress
+
 - [x] Implement navbar
 
   - [x] Implement links
@@ -15,10 +19,7 @@ well as my work expierence to display everything that I have done.
   - [x] Implement logo button
   - [x] Implement reactive javascript for navbar
   - [ ] Fix navbar not showing on items below canvas height
-
-### In Progress
-
-None
+  - [ ] Make navbar background opacity 0 when at top of page
 
 ### Done
 
@@ -28,13 +29,11 @@ None
 
 ### Todo
 
-- [ ] Add javascript to calculate perfect center for learn more button
+None
 
 ### In Progress
 
-- [x] Implement "find out more button"
-
-  - [ ] Fix a link applying to padding above learn more
+None
 
 ### Done
 
@@ -44,6 +43,11 @@ None
 
   - [x] Fix line connection to particles
   - [x] Fix mouse position being displaced by scroll bar
+
+- [x] Implement "find out more button"
+
+  - [x] Fix a link applying to padding above learn more
+  - [x] Add javascript to calculate perfect center for learn more button
 
 ## About Me
 
