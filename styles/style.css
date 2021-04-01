@@ -33,7 +33,6 @@ nav {
   background-color: #282828;
   width: 100%;
   position: fixed;
-  position: absolute;
   z-index: 100;
 }
 
@@ -102,6 +101,7 @@ nav {
 
 .resume-button:hover {
   background: #293937;
+  opacity: 0.5;
 }
 
 #home {
