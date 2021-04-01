@@ -18,7 +18,7 @@ None
   - [x] Implement resume button
   - [x] Implement logo button
   - [x] Implement reactive javascript for navbar
-  - [ ] Fix navbar not showing on items below canvas height
+  - [x] Fix navbar not showing on items below canvas height
   - [ ] Make navbar background opacity 0 when at top of page
   - [ ] Add Transitions when selecting section
 
@@ -39,7 +39,7 @@ None
   - [x] Fix a link applying to padding above learn more
   - [x] Add javascript to calculate perfect center for learn more button
   - [ ] Implement Transition after clicking learn more
-  - [ ] Fix position not being static after refresh
+  - [x] Fix position not being static after refresh
 
 ### Done
 
