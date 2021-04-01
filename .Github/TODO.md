@@ -8,9 +8,13 @@ well as my work expierence to display everything that I have done.
 
 ### Todo
 
-None
+- [ ] Refactor for mobile compatibility
 
 ### In Progress
+
+None
+
+### Done
 
 - [x] Implement navbar
 
@@ -19,27 +23,18 @@ None
   - [x] Implement logo button
   - [x] Implement reactive javascript for navbar
   - [x] Fix navbar not showing on items below canvas height
-  - [ ] Make navbar background opacity 0 when at top of page
-  - [ ] Add Transitions when selecting section
-
-### Done
-
-None
+  - [x] Make navbar background opacity 0 when at top of page
+  - [x] Add Transitions when selecting section
 
 ## Home page
 
 ### Todo
 
-None
+- [ ] Refactor for mobile compatibility
 
 ### In Progress
 
-- [x] Implement "find out more button"
-
-  - [x] Fix a link applying to padding above learn more
-  - [x] Add javascript to calculate perfect center for learn more button
-  - [ ] Implement Transition after clicking learn more
-  - [x] Fix position not being static after refresh
+None
 
 ### Done
 
@@ -49,6 +44,13 @@ None
 
   - [x] Fix line connection to particles
   - [x] Fix mouse position being displaced by scroll bar
+
+- [x] Implement "find out more button"
+
+  - [x] Fix a link applying to padding above learn more
+  - [x] Add javascript to calculate perfect center for learn more button
+  - [x] Implement Transition after clicking learn more
+  - [x] Fix position not being static after refresh
 
 ## About Me
 
