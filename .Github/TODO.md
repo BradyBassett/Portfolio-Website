@@ -17,10 +17,16 @@ None
 ### Done
 
 - [x] Implement navbar
+
   - [x] Implement links
   - [x] Implement resume button
   - [x] Implement logo button
   - [x] Implement reactive javascript for navbar
+
+- [x] Implement interactive background
+
+  - [x] Fix line connection to particles
+  - [x] Fix mouse position being displaced by scroll bar
 
 ## Home page
 
@@ -29,11 +35,6 @@ None
 None
 
 ### In Progress
-
-- [x] Implement interactive background
-
-  - [ ] Fix line connection to particles
-  - [ ] Fix mouse position when scrolling down
 
 - [ ] Add javascript to calculate perfect center for learn more button
 - [ ] Fix a link applying to padding above learn more
