@@ -15,8 +15,12 @@ let mouse = {
 };
 
 window.addEventListener("mousemove", function(event){
-    mouse.x = event.x;
-    mouse.y = event.y;
+    var rect = canvas.getBoundingClientRect();
+    var scaleX = canvas.width / rect.width;
+    var scaleY = canvas.height / rect.height;
+
+    mouse.x = (event.x - rect.left) * scaleX;
+    mouse.y = (event.y - rect.top) * scaleY;
 });
 
 class Particle {
