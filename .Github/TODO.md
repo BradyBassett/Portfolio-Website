@@ -58,7 +58,7 @@ None
 
 ### In Progress
 
-None
+- [x] Implement About me section
 
 ### Done
 
@@ -68,7 +68,7 @@ None
 
 ### Todo
 
-None
+- [x] Implement My Projects section
 
 ### In Progress
 
@@ -82,7 +82,7 @@ None
 
 ### Todo
 
-None
+- [x] Implement My Work section
 
 ### In Progress
 
@@ -96,7 +96,7 @@ None
 
 ### Todo
 
-None
+- [x] Implement Contact Me section
 
 ### In Progress
 
