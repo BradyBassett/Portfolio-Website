@@ -174,7 +174,6 @@ nav {
   text-decoration: none;
   list-style: none;
   text-align: center;
-  font-size: 30px;
 }
 
 #learn-more-button {
@@ -182,6 +181,7 @@ nav {
   border-radius: 3px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 30px;
 }
 
 #learn-more-button:hover {
@@ -260,10 +260,7 @@ nav {
 
 #about-me-text ul {
   display: grid;
-  grid-template-columns: minmax(min-content, 200px) minmax(min-content, 200px) minmax(
-      min-content,
-      200px
-    );
+  grid-template-columns: auto auto auto;
 }
 
 #about-me-text li {
@@ -284,14 +281,83 @@ nav {
 }
 
 #my-projects {
-  text-align: right;
-  padding-right: 20%;
+  text-align: center;
 }
 
-#my-work {
-  text-align: left;
-  padding-left: 20%;
+.project-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
+
+.project-container a {
+  text-decoration: none;
+}
+
+.project {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #303030;
+  width: 310px;
+  height: 300px;
+}
+
+.project ol {
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+.project:hover {
+  background-color: #3a3a3a;
+}
+
+.project-icon {
+  font-size: 30px;
+  padding-top: 12px;
+  padding-right: 15px;
+}
+
+.project-icon a {
+  color: #bfbfbf;
+}
+
+.project-title {
+  text-align: left;
+  color: #98b4b2;
+  font-size: 25px;
+  padding-top: 70px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.project-desc {
+  font-size: 18px;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.project-tools {
+  color: #667977;
+  display: flex;
+  font-size: 14px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.project-tools li {
+  padding-right: 10px;
+  list-style: none;
+}
+
+/* #my-work {
+} */
 
 #contact-me {
   text-align: center;
