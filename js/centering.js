@@ -1,12 +1,12 @@
 $(function() {
-    setPos();
+    setPosLearnMore();
 
     $(window).resize (function() {
-        setPos();
+        setPosLearnMore();
     });
 });
 
-function setPos(){
+function setPosLearnMore(){
     $('#learn-more-button').position({
         my: "center bottom",
         at: "center bottom-15",
