@@ -8,11 +8,11 @@ well as my work expierence to display everything that I have done.
 
 ### Todo
 
-- [ ] Refactor for mobile compatibility
+None
 
 ### In Progress
 
-None
+- [ ] Refactor for mobile compatibility
 
 ### Done
 
@@ -30,7 +30,7 @@ None
 
 ### Todo
 
-- [ ] Refactor for mobile compatibility
+None
 
 ### In Progress
 
@@ -58,17 +58,17 @@ None
 
 ### In Progress
 
-- [x] Implement About me section
+None
 
 ### Done
 
-None
+- [x] Implement About me section
 
 ## My Projects
 
 ### Todo
 
-- [x] Implement My Projects section
+None
 
 ### In Progress
 
@@ -76,13 +76,13 @@ None
 
 ### Done
 
-None
+- [x] Implement My Projects section
 
 ## My Work
 
 ### Todo
 
-- [x] Implement My Work section
+None
 
 ### In Progress
 
@@ -90,13 +90,13 @@ None
 
 ### Done
 
-None
+- [x] Implement My Work section
 
 ## Contact Me
 
 ### Todo
 
-- [x] Implement Contact Me section
+None
 
 ### In Progress
 
@@ -104,4 +104,4 @@ None
 
 ### Done
 
-None
+- [x] Implement Contact Me section
