@@ -22,7 +22,7 @@ h2 {
 }
 
 h3 {
-  color: #6d8583;
+  color: #98b4b2;
   font-size: 40px;
 }
 
@@ -79,6 +79,7 @@ nav {
 }
 
 .nav-links li a::before {
+  font-size: 18px;
   color: #00897b;
   content: "[" counter(item) "] ";
   counter-increment: item;
@@ -89,7 +90,6 @@ nav {
 }
 
 .resume-button {
-  text-align: right;
   text-decoration: none;
   color: inherit;
   letter-spacing: 1px;
@@ -107,6 +107,61 @@ nav {
 .resume-button:hover {
   background: #293937;
   opacity: 0.5;
+}
+
+.side-element {
+  writing-mode: vertical-lr;
+  width: 50px;
+  letter-spacing: 2px;
+}
+
+.side-element a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.side-element a:hover {
+  color: #00897b;
+}
+
+.line-left {
+  position: fixed;
+  bottom: 0;
+  left: 54px;
+  width: 1px;
+  height: 15%;
+  content: "\a0";
+  background-color: #bfbfbf;
+}
+
+.line-right {
+  position: fixed;
+  bottom: 0;
+  right: 52px;
+  width: 1px;
+  height: 15%;
+  content: "\a0";
+  background-color: #bfbfbf;
+}
+
+.left-elements {
+  position: fixed;
+  left: 40px;
+  right: auto;
+  bottom: 18%;
+  font-size: 25px;
+}
+
+.right-elements {
+  position: fixed;
+  left: auto;
+  right: 40px;
+  bottom: 18%;
+  font-size: 18px;
+}
+
+.fa:hover {
+  color: #00897b;
 }
 
 #home {
@@ -172,20 +227,60 @@ nav {
 }
 
 .sections {
-  margin-top: 5%;
+  margin-top: 7%;
+  margin-bottom: 7%;
   margin-left: 20%;
   margin-right: 20%;
 }
 
 .sections h3::before {
+  font-size: 35px;
   color: #00897b;
   content: "[" counter(section) "] ";
   counter-increment: section;
 }
 
-#about-me {
+#about-me h3 {
+  padding-bottom: 5%;
+}
+
+#about-me-container {
+  display: flex;
+}
+
+#about-me-text {
+  padding-top: 2.5%;
+  padding-right: 3%;
   text-align: left;
-  padding-left: 20%;
+}
+
+.paragraph {
+  padding-bottom: 20px;
+}
+
+#about-me-text ul {
+  display: grid;
+  grid-template-columns: minmax(min-content, 200px) minmax(min-content, 200px) minmax(
+      min-content,
+      200px
+    );
+}
+
+#about-me-text li {
+  list-style: none;
+  color: #799794;
+  font-size: 17px;
+}
+
+#about-me-text li::before {
+  font-size: 20px;
+  color: #00897b;
+  content: "🢒 ";
+}
+
+#about-me-photo {
+  max-width: 100%;
+  filter: drop-shadow(30px 10px 4px rgba(84, 88, 88, 0.05));
 }
 
 #my-projects {
