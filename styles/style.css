@@ -56,17 +56,17 @@ nav {
 }
 
 .nav-logo {
-  padding-top: 5px;
   width: 60px;
   height: auto;
+  padding-top: 5px;
 }
 
 .nav-links {
-  padding-left: 5%;
-  padding-right: 45%;
   display: flex;
-  width: 100%;
   justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  align-items: center;
 }
 
 .nav-links li {
@@ -104,14 +104,12 @@ nav {
   color: inherit;
   letter-spacing: 1px;
   font-size: 25px;
-  position: absolute;
-  right: 50px;
-  padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 15px;
   padding-left: 15px;
   border: 2px solid #00897b;
   border-radius: 3px;
+  margin-left: 50%;
 }
 
 .resume-button:hover {
@@ -378,23 +376,20 @@ nav {
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 2%;
+  padding-bottom: 5%;
 }
 
 #contact-me a {
-  text-decoration: none;
-}
-
-#contact-me-button {
-  margin-left: 40%;
-  margin-right: 40%;
   color: #00897b;
+
+  font-size: 30px;
+  text-decoration: none;
   border: 2px solid #00897b;
   border-radius: 3px;
-  font-size: 30px;
-  margin-top: 5%;
+  padding: 20px;
 }
 
-#contact-me-button:hover {
+#contact-me a:hover {
   background: #293937;
   opacity: 0.5;
 }
