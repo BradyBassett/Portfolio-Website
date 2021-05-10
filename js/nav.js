@@ -1,4 +1,9 @@
 $(function() {
+    navToggle();
+    navSlide();
+});
+
+function navToggle() {
     var old_pos = $(document).scrollTop();
 
     $(window).scroll(function(){
@@ -7,6 +12,7 @@ $(function() {
 
         if (new_pos > old_pos && toggled == false) {
             $('.navbar-toggle').css('transform', 'translateY(-90px)');
+            console.log('called');
             toggled = true;
         }
         else {
@@ -23,5 +29,53 @@ $(function() {
         else if (toggled == false && new_pos == 0){
             $('.navbar-toggle').css('box-shadow', '');
         }
+
+        return toggled;
     });
-});
+}
+
+function navSlide() {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    const resumeButton = document.querySelector('.resume-button');
+    var hidden = false;
+
+    burger.addEventListener('click', function() {
+        nav.classList.toggle('nav-active');
+        $('.nav-links').css('transition', 'transform 0.5s ease-in')
+
+        if (hidden == false) {
+            $('nav').css('background-color', 'rgba(40, 40, 40, 1)')
+            $('.navbar-toggle').css('transform', `translateY(0)`);
+            $('body').css('overflow-y', "hidden")
+            $(window).scroll(function(){
+                $('.navbar-toggle').css('transform', `translateY(0)`);
+            });
+            hidden = true;
+        }
+        else {
+            $('body').css('overflow-y', "visible")
+            $('nav').css('background-color', 'rgba(40, 40, 40, 0)')
+            hidden = false;
+        }
+
+        navLinks.forEach(function(link, index) {
+            if (link.style.animation) {
+                link.style.animation = '';
+            }
+            else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + .5}s`;
+            }
+        });
+
+        if (resumeButton.style.animation) {
+            resumeButton.style.animation = '';
+        }
+        else {
+            resumeButton.style.animation = 'navLinkFade 0.5s ease forwards 1s';
+        }
+
+        burger.classList.toggle('toggle')
+    });
+}
