@@ -1,18 +1,28 @@
 $(function() {
-    navToggle();
-    navSlide();
-});
+    // Burger Toggle
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    const resumeButton = document.querySelector('.resume-button');
+    var hidden = false;
 
-function navToggle() {
+    burger.addEventListener('click', function() {
+        hidden = burgerToggle(burger, nav, navLinks, resumeButton, hidden);
+    });
+
+    nav.addEventListener('click', function() {
+        hidden = burgerToggle(burger, nav, navLinks, resumeButton, hidden);
+    });
+
+    // Nav Toggle
     var old_pos = $(document).scrollTop();
 
     $(window).scroll(function(){
         var new_pos = $(document).scrollTop();
         var toggled = false;
 
-        if (new_pos > old_pos && toggled == false) {
+        if (new_pos > old_pos && toggled == false && hidden == false) {
             $('.navbar-toggle').css('transform', 'translateY(-90px)');
-            console.log('called');
             toggled = true;
         }
         else {
@@ -29,34 +39,27 @@ function navToggle() {
         else if (toggled == false && new_pos == 0){
             $('.navbar-toggle').css('box-shadow', '');
         }
-
-        return toggled;
     });
-}
+});
 
-function navSlide() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-    const resumeButton = document.querySelector('.resume-button');
-    var hidden = false;
-
-    burger.addEventListener('click', function() {
-        nav.classList.toggle('nav-active');
+function burgerToggle(burger, nav, navLinks, resumeButton, hidden) {
+    nav.classList.toggle('nav-active');
         $('.nav-links').css('transition', 'transform 0.5s ease-in')
 
         if (hidden == false) {
             $('nav').css('background-color', 'rgba(40, 40, 40, 1)')
             $('.navbar-toggle').css('transform', `translateY(0)`);
             $('body').css('overflow-y', "hidden")
-            $(window).scroll(function(){
-                $('.navbar-toggle').css('transform', `translateY(0)`);
-            });
             hidden = true;
+        }
+        else if (hidden == true && $(document).scrollTop() == 0){
+            $('body').css('overflow-y', "visible")
+            $('nav').css('background-color', 'rgba(40, 40, 40, 0)')
+            hidden = false;
         }
         else {
             $('body').css('overflow-y', "visible")
-            $('nav').css('background-color', 'rgba(40, 40, 40, 0)')
+            $('nav').css('background-color', 'rgba(40, 40, 40, 1)')
             hidden = false;
         }
 
@@ -77,5 +80,6 @@ function navSlide() {
         }
 
         burger.classList.toggle('toggle')
-    });
+
+    return hidden;
 }
