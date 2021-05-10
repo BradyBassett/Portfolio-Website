@@ -304,8 +304,12 @@ nav {
 }
 
 #about-me-photo {
-  max-width: 100%;
   filter: drop-shadow(30px 10px 4px rgba(84, 88, 88, 0.05));
+}
+
+#about-me-photo img {
+  width: 380px;
+  height: auto;
 }
 
 #my-projects {
@@ -314,10 +318,13 @@ nav {
 
 .project-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 15px;
+  grid-template-columns: 410px 410px 410px;
+  gap: 2.5%;
   padding-top: 5%;
   padding-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
 }
 
 .project-container a {
@@ -325,11 +332,9 @@ nav {
 }
 
 .project {
-  width: 100%;
-  height: 100%;
   border-radius: 5px;
   background-color: #303030;
-  width: 310px;
+  width: 100%;
   height: 300px;
 }
 
@@ -413,6 +418,18 @@ nav {
   opacity: 0.5;
 }
 
+.social-bottom {
+  margin-top: 20%;
+  margin-bottom: 2%;
+  letter-spacing: 10px;
+  font-size: 25px;
+  display: none;
+}
+
+.social-bottom a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1850px) {
   .nav-links {
     width: 36%;
@@ -420,14 +437,51 @@ nav {
 }
 
 @media screen and (max-width: 1750px) {
+  h1 {
+    font-size: 100px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
   .nav-links {
     width: 37%;
+  }
+
+  #about-me-photo img {
+    width: 330px;
   }
 }
 
 @media screen and (max-width: 1650px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
   .nav-links {
     width: 40%;
+  }
+
+  #home-text {
+    padding-top: 13%;
+    padding-left: 20%;
+  }
+
+  #about-me-photo img {
+    width: 300px;
+  }
+
+  .project-container {
+    grid-template-columns: 350px 350px 350px;
   }
 }
 
@@ -435,17 +489,86 @@ nav {
   .nav-links {
     width: 43%;
   }
+
+  #about-me-photo img {
+    width: 280px;
+  }
 }
 
 @media screen and (max-width: 1450px) {
+  h1 {
+    font-size: 85px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
   .nav-links {
     width: 48%;
+  }
+
+  .side-element {
+    width: 40px;
+  }
+
+  .left-elements {
+    left: 35px;
+  }
+
+  .right-elements {
+    right: 35px;
+  }
+
+  .line-left {
+    left: 50px;
+  }
+
+  .line-right {
+    right: 47px;
+  }
+
+  #about-me-photo img {
+    width: 270px;
+  }
+
+  .project-container {
+    grid-template-columns: 300px 300px 300px;
   }
 }
 
 @media screen and (max-width: 1350px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
   .nav-links {
     width: 53%;
+  }
+
+  #home-text {
+    padding-top: 16%;
+  }
+
+  #about-me-container {
+    display: block;
+  }
+
+  #about-me-photo {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  .project-container {
+    grid-template-columns: 380px 380px;
   }
 }
 
@@ -453,11 +576,54 @@ nav {
   .nav-links {
     width: 57%;
   }
+
+  .project-container {
+    grid-template-columns: 320px 320px;
+  }
+
+  #contact-me p {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 7%;
+  }
 }
 
 @media screen and (max-width: 1150px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 37px;
+  }
+
   .nav-links {
     width: 62%;
+  }
+
+  .side-element {
+    width: 30px;
+  }
+
+  .left-elements {
+    left: 25px;
+  }
+
+  .right-elements {
+    right: 30px;
+  }
+
+  .line-left {
+    left: 40px;
+  }
+
+  .line-right {
+    right: 42px;
+  }
+
+  .project-container {
+    grid-template-columns: 300px 300px;
   }
 }
 
@@ -467,17 +633,36 @@ nav {
   }
 }
 
-/* @media screen and (max-width: 950px) {
-  .nav-links {
+@media screen and (max-width: 950px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .side-element {
+    display: none;
+  }
+
+  .social-bottom {
+    display: block;
+  }
+
+  .project-container {
+    grid-template-columns: 280px 280px;
+  }
+
+  #contact-me p {
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 7%;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .nav-links {
-  }
-} */
-
-@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
     overflow-y: visible;
@@ -515,6 +700,18 @@ nav {
 
   .burger {
     display: block;
+  }
+
+  .project-container {
+    grid-template-columns: 450px;
+    padding-bottom: 40%;
+  }
+
+  #contact-me p {
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 10%;
   }
 }
 
