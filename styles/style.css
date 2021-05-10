@@ -703,8 +703,8 @@ nav {
   }
 
   .project-container {
-    grid-template-columns: 450px;
-    padding-bottom: 40%;
+    grid-template-columns: 400px;
+    padding-bottom: 70%;
   }
 
   #contact-me p {
